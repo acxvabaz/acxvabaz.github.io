@@ -1,0 +1,250 @@
+* {
+	margin: 0;
+	padding: 0;
+	word-wrap: break-word;
+	box-sizing: border-box;
+}
+
+::selection { 
+	background-color: #000;
+	color: #fff;
+}
+
+body {
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  font-family: Jost;
+  align-items: center;
+  max-width: 100vw;
+}
+
+
+#Main {
+    right: 50%;
+	bottom: 50%;
+	transform: translate(50%,50%);
+	position: absolute;
+	word-wrap: break-word;
+}
+
+#Main img {
+	width: 200px;
+	height: auto;
+}
+
+#content {
+	margin: 10px;
+	margin-top: 100px;
+	min-width: 0px;
+	word-wrap: break-word;
+}
+
+#content a {
+	background-color: #fff;
+	color:#000;
+}
+
+
+
+#nav-bar {
+	align-items: center;
+	position: fixed;
+	top: 0px;
+	width: 100vw;
+	height: auto;
+	z-index: 10000;
+	background-color: #000;
+	color: #fff !important;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: auto;
+}
+
+.tab-but {
+	font-size: 140%;
+	color: white;
+}
+
+a {
+	background-color: #000;
+	margin-left: 8px;
+	margin-right: 8px;
+	font-family: Jost;
+	border: none;
+	font-weight: 300;
+	text-decoration: none;
+	color: white;
+}
+
+a:hover {
+	font-weight: bolder;
+}
+
+
+
+h1 {
+	font-size: 3em;
+	font-weight: Black;
+}
+h2 {
+	font-size: 2em;
+	font-weight: 600;
+}
+h3 {
+	font-size: 1.7em;
+	font-weight: 300;
+	font-style: italic;
+}
+table {
+	max-width: 100%;
+}
+table, th, td {
+	border: 1px solid;
+	border-color: black;
+	border-collapse: collapse;
+	padding: 8px;
+}
+td {
+	font-weight: 300;
+}
+p {
+	font-weight: 300;
+}
+.transition-fade {
+	transition: 500ms;
+	opacity: 1;
+}
+
+html.is-animating .transition-fade {
+	opacity: 0;
+}
+
+.button {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	color: #fff;
+	justify-items: center;
+}
+
+.button img {
+	margin-left: auto;
+	margin-right: auto;
+	background-color: rgba(255, 255, 255, 0);
+}
+
+
+.tab-but-container {
+	display: none;
+}
+
+.tab-but-container.clicked {
+	display: block;
+}
+
+
+
+@media (min-width: 800px) {
+	#nav-bar {
+		height: 100%;
+		border-style: solid;
+		border-width: 0px 2px 0px 0px;
+  		width: 200px;
+		position: fixed;
+		text-align: center !important;
+	}
+
+	#nav-bar .logo {
+		margin-top: 50px;
+	}
+	#content {
+		margin-left: 220px;
+		font-size: 150%;
+	}
+	.tab-but-container {
+		display: flex;
+		flex-direction: column;
+		right: 50%;
+		bottom: 50%;
+		transform: translate(50%,50%);
+		position: absolute;
+	}
+
+	.tab-but-container.clicked {
+		display: flex;
+	}
+
+
+	#Main {
+		margin-left: 220px;
+		text-align: center;
+		font-size: 140%;
+		word-wrap: break-word;
+	}
+	table {
+		max-width: 75%;
+	}
+	body {
+		justify-content: left;
+		text-align: left;
+	}
+	#Main img {
+		width: 500px;
+		height: auto;
+	}
+
+	.button {
+		display: none;
+	}
+
+}
+
+/* code: https://timnwells.medium.com/create-a-simple-responsive-image-gallery-with-html-and-css-fcb973f595ea */
+
+#gallery {
+	line-height:0;
+	-webkit-column-count:3; 
+	-webkit-column-gap:5px; 
+	-moz-column-count:3;
+	-moz-column-gap:5px;
+	column-count:3;
+	column-gap:5px;
+ }
+
+
+
+ #gallery img {
+	width: 100% !important;
+	height: auto !important;
+	margin-bottom:5px; 
+ }
+
+#gallery img:hover {
+	animation-name: randomani;
+	animation-duration: 1s;
+}
+
+@keyframes randomani {
+	0% {transform: scale(1)}
+	100% {transform: scale(0.9)}
+}
+
+ @media (max-width: 1100px) {
+	#gallery {
+	 -moz-column-count:    2;
+	 -webkit-column-count: 2;
+	 column-count:         2;
+	}
+ }
+
+ @media (max-width: 600px) {
+	#gallery {
+	 -moz-column-count:    1;
+	 -webkit-column-count: 1;
+	 column-count:         1;
+	}
+
+ }
