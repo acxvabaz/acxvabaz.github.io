@@ -225,6 +225,7 @@ html.is-animating .transition-fade {
 #gallery img:hover {
 	animation-name: randomani;
 	animation-duration: 1s;
+	animation-fill-mode: forwards;
 }
 
 @keyframes randomani {
